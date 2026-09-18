@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="favCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="50%" stop-color="#D9234B" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="favMGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background White Circle for crisp contrast -->
+  <circle cx="50" cy="50" r="48" fill="#FFFFFF" />
+
+  <!-- Outer Gradient Circular Ring (2nd Image) -->
+  <circle
+    cx="50"
+    cy="50"
+    r="44"
+    fill="none"
+    stroke="url(#favCircleGrad)"
+    stroke-width="5.5"
+  />
+
+  <!-- Inner Sharp Geometric 'M' Emblem (2nd Image) -->
+  <path
+    d="M 28,72 L 28,32 L 50,62 L 72,32 L 72,72"
+    fill="none"
+    stroke="url(#favMGrad)"
+    stroke-width="8.5"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+</svg>

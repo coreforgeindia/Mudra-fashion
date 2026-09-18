@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), 'Outfit', var(--font-sans), sans-serif;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+:root {
+  color-scheme: light;
+  --background: #FBF8F1;
+  --foreground: #212529;
+  --card: #FFF9EF;
+  --card-foreground: #212529;
+  --primary: #C4A35A;
+  --primary-foreground: #ffffff;
+  --muted: #F5F0E5;
+  --muted-foreground: #6B7280;
+  --border: #E8E0D0;
+  --ring: #C4A35A;
+  --accent-green: #7BA48E;
+  --accent-blue: #8BB8D0;
+  --accent-beige: #E8D5A3;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #FBF8F1; }
+body {
+  margin: 0;
+  background: #FBF8F1;
+  color: #212529;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+  color: #212529;
+}
